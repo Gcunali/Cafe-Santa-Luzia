@@ -385,7 +385,7 @@
       color: rgba(247,234,210,0.76);
     }
 
-    /* PRODUTOS */
+/* PRODUTOS */
 
 .products {
   background:
@@ -422,32 +422,24 @@
   height: 310px;
   position: relative;
   overflow: hidden;
-  background-color: #120f0a;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #120f0a;
   border-bottom: 1px solid rgba(218, 166, 79, 0.25);
 }
 
-/* CAFÉ EM GRÃO */
-.product-img.grao {
-  background-image:
-    linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("assets/cafe-grao.jpg");
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-/* CAFÉ EM PÓ */
-.product-img.po {
-  background-image:
-    linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("assets/cafe-po.jpg");
-}
-
-/* CAFÉ EM CÁPSULA */
-.product-img.capsula {
-  background-image:
-    linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("assets/cafe-capsula.jpg");
+.product-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35));
+  pointer-events: none;
 }
 
 .product-badge {
@@ -520,7 +512,150 @@
 .product-card .btn {
   width: 100%;
 }
+/* PROCESSO */
 
+.process-section {
+  background:
+    radial-gradient(circle at top center, rgba(214,166,79,0.10), transparent 38%),
+    linear-gradient(180deg, #120b06 0%, #1a0f08 50%, #0b0704 100%);
+  border-top: 1px solid rgba(214,166,79,0.18);
+  border-bottom: 1px solid rgba(214,166,79,0.18);
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 42px;
+  align-items: stretch;
+}
+
+.process-image {
+  position: relative;
+  min-height: 620px;
+  border-radius: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(214,166,79,0.35);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.50);
+  background: #000;
+}
+
+.process-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+  transition: 0.4s;
+}
+
+.process-image:hover img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.process-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8,6,4,0.05), rgba(8,6,4,0.78)),
+    radial-gradient(circle at top right, rgba(214,166,79,0.20), transparent 35%);
+}
+
+.process-image-label {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 26px;
+  z-index: 2;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(8,6,4,0.72);
+  border: 1px solid rgba(214,166,79,0.35);
+  backdrop-filter: blur(8px);
+}
+
+.process-image-label strong {
+  display: block;
+  color: var(--dourado);
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.process-image-label span {
+  color: rgba(247,234,210,0.82);
+  font-size: 0.95rem;
+}
+
+.process-steps {
+  display: grid;
+  gap: 18px;
+}
+
+.process-card {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 26px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255,248,234,0.075), rgba(255,248,234,0.025));
+  border: 1px solid rgba(214,166,79,0.25);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(214,166,79,0.10), transparent 48%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.process-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(214,166,79,0.65);
+}
+
+.process-card:hover::before {
+  opacity: 1;
+}
+
+.process-number {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--dourado), var(--caramelo));
+  color: #160b04;
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 0 12px 28px rgba(214,166,79,0.22);
+  position: relative;
+  z-index: 2;
+}
+
+.process-card h3 {
+  color: var(--dourado);
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-card p {
+  color: rgba(247,234,210,0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+  position: relative;
+  z-index: 2;
+}
     /* DESTAQUE */
 
     .banner {
@@ -726,6 +861,7 @@
     /* RESPONSIVO */
 
     @media (max-width: 980px) {
+
       .menu {
         display: none;
       }
@@ -753,6 +889,13 @@
       .gallery-item.large {
         grid-row: span 1;
       }
+      .process-layout {
+  grid-template-columns: 1fr;
+}
+
+.process-image {
+  min-height: 420px;
+}
     }
 
     @media (max-width: 650px) {
@@ -794,6 +937,18 @@
       section {
         padding: 68px 0;
       }
+      .process-card {
+  grid-template-columns: 1fr;
+}
+
+.process-number {
+  width: 56px;
+  height: 56px;
+}
+
+.process-image {
+  min-height: 340px;
+}
     }
   </style>
 </head>
@@ -905,196 +1060,234 @@
   </section>
 
   <!-- PRODUTOS -->
-  <section id="produtos" class="products">
-    <div class="container">
-      <div class="section-title">
-        <span class="small">Nossos produtos</span>
-        <h2>Escolha seu Café Santa Luzia</h2>
-        <p>
-          Três formas de apreciar o mesmo cuidado: café em grão para quem gosta de moer na hora,
-          café em pó para o preparo tradicional e cápsulas para quem busca praticidade sem abrir mão do sabor.
-        </p>
-      </div>
-
-      <div class="product-grid">
-
-        <!-- CAFÉ EM GRÃO -->
-        <div class="product-img">
-          <img src="./assets/cafe-grao.jpg" alt="Café Santa Luzia em grão">
-            <span class="product-badge">Mais aromático</span>
-              </div>
-
-          <div class="product-content">
-            <h3>Café em Grão</h3>
-
-            <p>
-              Ideal para quem deseja preservar ao máximo o aroma e a intensidade do café.
-              Perfeito para moagem na hora, seja no coador, prensa francesa, moka ou espresso.
-            </p>
-
-            <div class="details">
-              <div>
-                <span>Perfil</span>
-                <span>Aromático e encorpado</span>
-              </div>
-              <div>
-                <span>Indicado para</span>
-                <span>Moagem fresca</span>
-              </div>
-              <div>
-                <span>Embalagem</span>
-                <span>250 g / 500 g / 1 kg</span>
-              </div>
-              <div>
-                <span>Torra</span>
-                <span>Média especial</span>
-              </div>
-            </div>
-
-            <div class="price">
-              A partir de R$ 00,00 <small>/ pacote</small>
-            </div>
-
-            <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em grão."
-               class="btn btn-primary"
-               target="_blank">
-              Pedir café em grão
-            </a>
-          </div>
-        </article>
-
-        <!-- CAFÉ EM PÓ -->
-        <div class="product-img">
-          <img src="./assets/cafe-po.jpg" alt="Café Santa Luzia em pó">
-            <span class="product-badge">Tradicional</span>
-              </div>
-
-          <div class="product-content">
-            <h3>Café em Pó</h3>
-
-            <p>
-              A versão clássica para o café passado no coador, com aquele cheiro de manhã no interior.
-              Prático para o dia a dia, mantendo sabor equilibrado e presença na xícara.
-            </p>
-
-            <div class="details">
-              <div>
-                <span>Perfil</span>
-                <span>Equilibrado e marcante</span>
-              </div>
-              <div>
-                <span>Indicado para</span>
-                <span>Coador e cafeteira</span>
-              </div>
-              <div>
-                <span>Embalagem</span>
-                <span>250 g / 500 g</span>
-              </div>
-              <div>
-                <span>Moagem</span>
-                <span>Média</span>
-              </div>
-            </div>
-
-            <div class="price">
-              A partir de R$ 00,00 <small>/ pacote</small>
-            </div>
-
-            <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em pó."
-               class="btn btn-primary"
-               target="_blank">
-              Pedir café em pó
-            </a>
-          </div>
-        </article>
-
-        <!-- CAFÉ EM CÁPSULA -->
-        <div class="product-img">
-            <img src="./assets/cafe-capsula.jpg" alt="Cápsulas Café Santa Luzia">
-              <span class="product-badge">Praticidade</span>
-                </div>
-
-          <div class="product-content">
-            <h3>Café em Cápsula</h3>
-
-            <p>
-              Para quem quer praticidade sem perder a experiência de um café com personalidade.
-              Uma opção moderna, mantendo o visual premium e a essência rústica da marca.
-            </p>
-
-            <div class="details">
-              <div>
-                <span>Perfil</span>
-                <span>Intenso e cremoso</span>
-              </div>
-              <div>
-                <span>Indicado para</span>
-                <span>Máquinas compatíveis</span>
-              </div>
-              <div>
-                <span>Embalagem</span>
-                <span>Caixa com 10 unidades</span>
-              </div>
-              <div>
-                <span>Experiência</span>
-                <span>Rápida e premium</span>
-              </div>
-            </div>
-
-            <div class="price">
-              A partir de R$ 00,00 <small>/ caixa</small>
-            </div>
-
-            <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em cápsula."
-               class="btn btn-primary"
-               target="_blank">
-              Pedir cápsulas
-            </a>
-          </div>
-        </article>
-
-      </div>
+<section id="produtos" class="products">
+  <div class="container">
+    <div class="section-title">
+      <span class="small">Nossos produtos</span>
+      <h2>Escolha seu Café Santa Luzia</h2>
+      <p>
+        Três formas de apreciar o mesmo cuidado: café em grão para quem gosta de moer na hora,
+        café em pó para o preparo tradicional e cápsulas para quem busca praticidade sem abrir mão do sabor.
+      </p>
     </div>
-  </section>
+
+    <div class="product-grid">
+
+      <!-- CAFÉ EM GRÃO -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-grao.jpg" alt="Café Santa Luzia em grão">
+          <span class="product-badge">Mais aromático</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Grão</h3>
+
+          <p>
+            Ideal para quem deseja preservar ao máximo o aroma e a intensidade do café.
+            Perfeito para moagem na hora, seja no coador, prensa francesa, moka ou espresso.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Aromático e encorpado</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Moagem fresca</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>250 g / 500 g / 1 kg</span>
+            </div>
+            <div>
+              <span>Torra</span>
+              <span>Média especial</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ pacote</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em grão."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir café em grão
+          </a>
+        </div>
+      </article>
+
+      <!-- CAFÉ EM PÓ -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-po.jpg" alt="Café Santa Luzia em pó">
+          <span class="product-badge">Tradicional</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Pó</h3>
+
+          <p>
+            A versão clássica para o café passado no coador, com aquele cheiro de manhã no interior.
+            Prático para o dia a dia, mantendo sabor equilibrado e presença na xícara.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Equilibrado e marcante</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Coador e cafeteira</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>250 g / 500 g</span>
+            </div>
+            <div>
+              <span>Moagem</span>
+              <span>Média</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ pacote</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em pó."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir café em pó
+          </a>
+        </div>
+      </article>
+
+      <!-- CAFÉ EM CÁPSULA -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-capsula.jpg" alt="Cápsulas Café Santa Luzia">
+          <span class="product-badge">Praticidade</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Cápsula</h3>
+
+          <p>
+            Para quem quer praticidade sem perder a experiência de um café com personalidade.
+            Uma opção moderna, mantendo o visual premium e a essência rústica da marca.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Intenso e cremoso</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Máquinas compatíveis</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>Caixa com 10 unidades</span>
+            </div>
+            <div>
+              <span>Experiência</span>
+              <span>Rápida e premium</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ caixa</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em cápsula."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir cápsulas
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <!-- PROCESSO -->
-  <section id="processo">
-    <div class="container">
-      <div class="section-title">
-        <span class="small">Do campo à xícara</span>
-        <h2>Um processo pensado para preservar sabor</h2>
-        <p>
-          O bom café não nasce por acaso. Ele depende de escolha, cuidado, tempo e respeito por cada etapa.
-        </p>
+<section id="processo" class="process-section">
+  <div class="container">
+    <div class="section-title">
+      <span class="small">Do campo à xícara</span>
+      <h2>Um processo pensado para preservar sabor</h2>
+      <p>
+        O Café Santa Luzia passa por etapas cuidadosas para manter aroma, corpo e qualidade.
+        Da lavoura ao preparo, cada detalhe ajuda a entregar um café com identidade, tradição e presença.
+      </p>
+    </div>
+
+    <div class="process-layout">
+      <div class="process-image">
+        <img src="assets/foto-lavoura.jpg" alt="Lavoura de café Santa Luzia">
+        <div class="process-image-label">
+          <strong>Origem selecionada</strong>
+          <span>Cuidado desde a lavoura</span>
+        </div>
       </div>
 
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="process-number">1</div>
-          <h3>Seleção</h3>
-          <p>Grãos escolhidos com atenção para garantir padrão, aroma e qualidade na bebida.</p>
-        </div>
+      <div class="process-steps">
 
-        <div class="process-card">
-          <div class="process-number">2</div>
-          <h3>Torra</h3>
-          <p>Torra equilibrada para destacar notas naturais e manter o sabor agradável.</p>
-        </div>
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <div>
+            <h3>Seleção dos grãos</h3>
+            <p>
+              Os grãos são escolhidos com atenção para garantir um padrão de qualidade,
+              aroma marcante e bebida equilibrada. Essa etapa é essencial para manter a
+              identidade do café em cada embalagem.
+            </p>
+          </div>
+        </article>
 
-        <div class="process-card">
-          <div class="process-number">3</div>
-          <h3>Embalagem</h3>
-          <p>Pacotes com identidade rústica e premium, pensados para valorizar o produto.</p>
-        </div>
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <div>
+            <h3>Torra equilibrada</h3>
+            <p>
+              A torra busca realçar as características naturais do café, preservando corpo,
+              aroma e sabor agradável. O objetivo é entregar uma bebida presente, sem perder
+              suavidade no preparo.
+            </p>
+          </div>
+        </article>
 
-        <div class="process-card">
-          <div class="process-number">4</div>
-          <h3>Entrega</h3>
-          <p>Pedido simples, atendimento próximo e envio para quem busca café de verdade.</p>
-        </div>
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <div>
+            <h3>Moagem e embalagem</h3>
+            <p>
+              Cada versão é preparada pensando no uso ideal: grão para quem mói na hora,
+              pó para o preparo tradicional e cápsulas para quem busca praticidade no dia a dia.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04</div>
+          <div>
+            <h3>Entrega e experiência</h3>
+            <p>
+              O Café Santa Luzia chega ao cliente com visual rústico, embalagem marcante
+              e atendimento próximo, mantendo a sensação de café do interior, feito com cuidado.
+            </p>
+          </div>
+        </article>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- BANNER -->
   <section>
