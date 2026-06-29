@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1445,3 +1446,1452 @@ Mensagem: ${mensagem}
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Santa Luzia | Tradição e Qualidade</title>
+
+  <style>
+    :root {
+      --preto: #080604;
+      --marrom-escuro: #1b1008;
+      --marrom: #4a2b15;
+      --caramelo: #b77a38;
+      --dourado: #d6a64f;
+      --creme: #f7ead2;
+      --verde: #31451f;
+      --branco-suave: #fff8ea;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(214,166,79,0.12), transparent 35%),
+        linear-gradient(180deg, #090604 0%, #1a0f08 45%, #080604 100%);
+      color: var(--creme);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 6, 4, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(214,166,79,0.25);
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--dourado);
+      background: #000;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      color: var(--dourado);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--creme);
+      opacity: 0.85;
+    }
+
+    .menu {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .menu a {
+      color: var(--creme);
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: var(--dourado);
+    }
+
+    .btn-nav {
+      background: linear-gradient(135deg, var(--dourado), var(--caramelo));
+      color: #160b04;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(214,166,79,0.25);
+    }
+
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      color: #160b04 !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 120px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(214,166,79,0.2);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(8,6,4,0.95) 0%, rgba(8,6,4,0.7) 48%, rgba(8,6,4,0.35) 100%),
+        url("assets/fazenda-cafe.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      right: -220px;
+      top: 120px;
+      background: radial-gradient(circle, rgba(214,166,79,0.25), transparent 65%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(214,166,79,0.55);
+      border-radius: 999px;
+      color: var(--dourado);
+      background: rgba(0,0,0,0.35);
+      margin-bottom: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.8rem, 7vw, 6.3rem);
+      line-height: 0.95;
+      color: var(--branco-suave);
+      text-transform: uppercase;
+      text-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    }
+
+    .hero h2 span {
+      color: var(--dourado);
+      display: block;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin-top: 24px;
+      font-size: 1.15rem;
+      color: rgba(247,234,210,0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--dourado), var(--caramelo));
+      color: #160b04;
+      box-shadow: 0 15px 35px rgba(214,166,79,0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(247,234,210,0.4);
+      color: var(--creme);
+      background: rgba(0,0,0,0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(180deg, rgba(255,248,234,0.08), rgba(255,248,234,0.02));
+      border: 1px solid rgba(214,166,79,0.35);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(214,166,79,0.25);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 22px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .hero-card-info {
+      margin-top: 18px;
+      padding: 18px;
+      background: rgba(0,0,0,0.35);
+      border-radius: 18px;
+      border: 1px solid rgba(214,166,79,0.2);
+    }
+
+    .hero-card-info h3 {
+      color: var(--dourado);
+      font-size: 1.4rem;
+    }
+
+    .hero-card-info p {
+      margin-top: 6px;
+      font-size: 0.95rem;
+      color: rgba(247,234,210,0.82);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .section-title .small {
+      color: var(--dourado);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    .section-title h2 {
+      margin-top: 8px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      color: var(--branco-suave);
+    }
+
+    .section-title p {
+      max-width: 760px;
+      margin: 16px auto 0;
+      color: rgba(247,234,210,0.82);
+      font-size: 1.05rem;
+    }
+
+    /* SOBRE */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-img {
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(214,166,79,0.35);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+      position: relative;
+    }
+
+    .about-img::after {
+      content: "Mococa - SP";
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      background: rgba(0,0,0,0.65);
+      color: var(--dourado);
+      border: 1px solid rgba(214,166,79,0.45);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .about-content h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--dourado);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      color: rgba(247,234,210,0.88);
+      font-size: 1.05rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,248,234,0.05);
+      border: 1px solid rgba(214,166,79,0.2);
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--dourado);
+      font-size: 1.4rem;
+    }
+
+    .feature span {
+      font-size: 0.88rem;
+      color: rgba(247,234,210,0.76);
+    }
+
+/* PRODUTOS */
+
+.products {
+  background:
+    linear-gradient(180deg, rgba(49,69,31,0.15), rgba(0,0,0,0)),
+    #120b06;
+  border-top: 1px solid rgba(214,166,79,0.18);
+  border-bottom: 1px solid rgba(214,166,79,0.18);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  background:
+    linear-gradient(180deg, rgba(255,248,234,0.08), rgba(255,248,234,0.025));
+  border: 1px solid rgba(214,166,79,0.28);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.35);
+  transition: 0.3s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214,166,79,0.75);
+}
+
+.product-img {
+  width: 100%;
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  background: #120f0a;
+  border-bottom: 1px solid rgba(218, 166, 79, 0.25);
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.product-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35));
+  pointer-events: none;
+}
+
+.product-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  padding: 10px 18px;
+  border: 1px solid rgba(218, 166, 79, 0.7);
+  border-radius: 999px;
+  background: rgba(8, 6, 4, 0.75);
+  color: #f3b347;
+  font-weight: 700;
+}
+
+.product-content {
+  padding: 26px;
+}
+
+.product-content h3 {
+  color: var(--dourado);
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.product-content p {
+  color: rgba(247,234,210,0.83);
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+}
+
+.details {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(214,166,79,0.25);
+  font-size: 0.92rem;
+}
+
+.details span:first-child {
+  color: rgba(247,234,210,0.68);
+}
+
+.details span:last-child {
+  color: var(--branco-suave);
+  font-weight: bold;
+  text-align: right;
+}
+
+.price {
+  font-size: 1.55rem;
+  color: var(--branco-suave);
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.price small {
+  font-size: 0.85rem;
+  color: rgba(247,234,210,0.65);
+  font-weight: normal;
+}
+
+.product-card .btn {
+  width: 100%;
+}
+/* PROCESSO */
+
+.process-section {
+  background:
+    radial-gradient(circle at top center, rgba(214,166,79,0.10), transparent 38%),
+    linear-gradient(180deg, #120b06 0%, #1a0f08 50%, #0b0704 100%);
+  border-top: 1px solid rgba(214,166,79,0.18);
+  border-bottom: 1px solid rgba(214,166,79,0.18);
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 42px;
+  align-items: stretch;
+}
+
+.process-image {
+  position: relative;
+  min-height: 620px;
+  border-radius: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(214,166,79,0.35);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.50);
+  background: #000;
+}
+
+.process-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+  transition: 0.4s;
+}
+
+.process-image:hover img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.process-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8,6,4,0.05), rgba(8,6,4,0.78)),
+    radial-gradient(circle at top right, rgba(214,166,79,0.20), transparent 35%);
+}
+
+.process-image-label {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 26px;
+  z-index: 2;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(8,6,4,0.72);
+  border: 1px solid rgba(214,166,79,0.35);
+  backdrop-filter: blur(8px);
+}
+
+.process-image-label strong {
+  display: block;
+  color: var(--dourado);
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.process-image-label span {
+  color: rgba(247,234,210,0.82);
+  font-size: 0.95rem;
+}
+
+.process-steps {
+  display: grid;
+  gap: 18px;
+}
+
+.process-card {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 26px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255,248,234,0.075), rgba(255,248,234,0.025));
+  border: 1px solid rgba(214,166,79,0.25);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(214,166,79,0.10), transparent 48%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.process-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(214,166,79,0.65);
+}
+
+.process-card:hover::before {
+  opacity: 1;
+}
+
+.process-number {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--dourado), var(--caramelo));
+  color: #160b04;
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 0 12px 28px rgba(214,166,79,0.22);
+  position: relative;
+  z-index: 2;
+}
+
+.process-card h3 {
+  color: var(--dourado);
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-card p {
+  color: rgba(247,234,210,0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+  position: relative;
+  z-index: 2;
+}
+    /* DESTAQUE */
+
+    .banner {
+      padding: 60px;
+      border-radius: 34px;
+      background:
+        linear-gradient(90deg, rgba(8,6,4,0.92), rgba(8,6,4,0.62)),
+        url("assets/graos-cafe.jpg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(214,166,79,0.35);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.45);
+    }
+
+    .banner h2 {
+      max-width: 780px;
+      color: var(--dourado);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .banner p {
+      max-width: 720px;
+      color: rgba(247,234,210,0.88);
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    /* GALERIA */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      grid-auto-rows: 230px;
+      gap: 18px;
+    }
+
+    .gallery-item {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(214,166,79,0.25);
+      position: relative;
+      background: #000;
+    }
+
+    .gallery-item.large {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+      opacity: 0.92;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+      opacity: 1;
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(0,0,0,0.62);
+      color: var(--dourado);
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(214,166,79,0.35);
+      font-size: 0.9rem;
+    }
+
+    /* CONTATO */
+
+    .contact {
+      background: #0b0704;
+      border-top: 1px solid rgba(214,166,79,0.18);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .contact-info {
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255,248,234,0.05);
+      border: 1px solid rgba(214,166,79,0.22);
+    }
+
+    .contact-info h2 {
+      color: var(--dourado);
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .contact-info p {
+      color: rgba(247,234,210,0.82);
+      margin-bottom: 22px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .contact-list div {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(0,0,0,0.24);
+      border: 1px solid rgba(214,166,79,0.16);
+    }
+
+    .contact-list strong {
+      color: var(--dourado);
+      display: block;
+    }
+
+    form {
+      padding: 34px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(214,166,79,0.08), rgba(255,248,234,0.03));
+      border: 1px solid rgba(214,166,79,0.28);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--dourado);
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(214,166,79,0.25);
+      background: rgba(0,0,0,0.35);
+      color: var(--creme);
+      outline: none;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--dourado);
+    }
+
+    footer {
+      padding: 36px 0;
+      text-align: center;
+      color: rgba(247,234,210,0.65);
+      background: #050302;
+      border-top: 1px solid rgba(214,166,79,0.18);
+    }
+
+    footer strong {
+      color: var(--dourado);
+    }
+
+    /* WHATSAPP FLOAT */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      font-size: 1.6rem;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 980px) {
+
+      .menu {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .product-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item.large {
+        grid-row: span 1;
+      }
+      .process-layout {
+  grid-template-columns: 1fr;
+}
+
+.process-image {
+  min-height: 420px;
+}
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        height: 76px;
+      }
+
+      .brand-text h1 {
+        font-size: 1rem;
+      }
+
+      .brand-text span {
+        font-size: 0.7rem;
+      }
+
+      .hero {
+        padding-top: 105px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .features,
+      .product-grid,
+      .process-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .banner {
+        padding: 34px 24px;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+      .process-card {
+  grid-template-columns: 1fr;
+}
+
+.process-number {
+  width: 56px;
+  height: 56px;
+}
+
+.process-image {
+  min-height: 340px;
+}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <!-- Troque pelo logo real -->
+        <img src="assets/logo-santa-luzia.png" alt="Logo Café Santa Luzia" class="brand-logo" />
+
+        <div class="brand-text">
+          <h1>Café Santa Luzia</h1>
+          <span>Tradição e Qualidade</span>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="#sobre">Nossa História</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#processo">Do Campo à Xícara</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato" class="btn-nav">Fazer Pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">Café 100% arábica produzido em Mococa - SP</span>
+
+        <h2>
+          Sabor de roça,
+          <span>alma do interior</span>
+        </h2>
+
+        <p>
+          O Café Santa Luzia nasce da tradição, do cuidado com a terra e da paixão pelo café bem feito.
+          Um café com aroma marcante, torra equilibrada e sabor que lembra conversa boa na varanda,
+          manhã tranquila e história de família.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-primary">Conhecer os cafés</a>
+          <a href="#contato" class="btn btn-secondary">Pedir pelo WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <!-- Troque pela imagem do rótulo ou embalagem -->
+        <img src="assets/logo-santa-luzia.png" alt="Rótulo Café Santa Luzia" />
+
+        <div class="hero-card-info">
+          <h3>Café com identidade brasileira</h3>
+          <p>
+            Visual rústico, sabor encorpado e produção regional para quem valoriza qualidade,
+            origem e tradição.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container about-grid">
+      <div class="about-img">
+        <!-- Troque por foto da fazenda, lavoura ou cidade -->
+        <img src="assets/fazenda-cafe.jpg" alt="Fazenda de café no interior" />
+      </div>
+
+      <div class="about-content">
+        <h2>Um café feito com calma, cuidado e tradição.</h2>
+
+        <p>
+          O Café Santa Luzia carrega a essência das cidades do interior: simplicidade, trabalho honesto,
+          cheiro de café passado na hora e aquele sabor que aproxima as pessoas. Cada pacote representa
+          uma história de cultivo, seleção e preparo.
+        </p>
+
+        <p>
+          Produzido na região de Mococa, interior de São Paulo, o café valoriza a origem e o cuidado em
+          cada etapa. Da escolha dos grãos à embalagem, a proposta é entregar um produto bonito,
+          marcante e confiável.
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <strong>100%</strong>
+            <span>Arábica selecionado</span>
+          </div>
+
+          <div class="feature">
+            <strong>3</strong>
+            <span>Versões de produto</span>
+          </div>
+
+          <div class="feature">
+            <strong>SP</strong>
+            <span>Produção regional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+<section id="produtos" class="products">
+  <div class="container">
+    <div class="section-title">
+      <span class="small">Nossos produtos</span>
+      <h2>Escolha seu Café Santa Luzia</h2>
+      <p>
+        Três formas de apreciar o mesmo cuidado: café em grão para quem gosta de moer na hora,
+        café em pó para o preparo tradicional e cápsulas para quem busca praticidade sem abrir mão do sabor.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- CAFÉ EM GRÃO -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-grao.jpg" alt="Café Santa Luzia em grão">
+          <span class="product-badge">Mais aromático</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Grão</h3>
+
+          <p>
+            Ideal para quem deseja preservar ao máximo o aroma e a intensidade do café.
+            Perfeito para moagem na hora, seja no coador, prensa francesa, moka ou espresso.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Aromático e encorpado</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Moagem fresca</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>250 g / 500 g / 1 kg</span>
+            </div>
+            <div>
+              <span>Torra</span>
+              <span>Média especial</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ pacote</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em grão."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir café em grão
+          </a>
+        </div>
+      </article>
+
+      <!-- CAFÉ EM PÓ -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-po.jpg" alt="Café Santa Luzia em pó">
+          <span class="product-badge">Tradicional</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Pó</h3>
+
+          <p>
+            A versão clássica para o café passado no coador, com aquele cheiro de manhã no interior.
+            Prático para o dia a dia, mantendo sabor equilibrado e presença na xícara.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Equilibrado e marcante</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Coador e cafeteira</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>250 g / 500 g</span>
+            </div>
+            <div>
+              <span>Moagem</span>
+              <span>Média</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ pacote</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em pó."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir café em pó
+          </a>
+        </div>
+      </article>
+
+      <!-- CAFÉ EM CÁPSULA -->
+      <article class="product-card">
+        <div class="product-img">
+          <img src="assets/cafe-capsula.jpg" alt="Cápsulas Café Santa Luzia">
+          <span class="product-badge">Praticidade</span>
+        </div>
+
+        <div class="product-content">
+          <h3>Café em Cápsula</h3>
+
+          <p>
+            Para quem quer praticidade sem perder a experiência de um café com personalidade.
+            Uma opção moderna, mantendo o visual premium e a essência rústica da marca.
+          </p>
+
+          <div class="details">
+            <div>
+              <span>Perfil</span>
+              <span>Intenso e cremoso</span>
+            </div>
+            <div>
+              <span>Indicado para</span>
+              <span>Máquinas compatíveis</span>
+            </div>
+            <div>
+              <span>Embalagem</span>
+              <span>Caixa com 10 unidades</span>
+            </div>
+            <div>
+              <span>Experiência</span>
+              <span>Rápida e premium</span>
+            </div>
+          </div>
+
+          <div class="price">
+            A partir de R$ 00,00 <small>/ caixa</small>
+          </div>
+
+          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em cápsula."
+             class="btn btn-primary"
+             target="_blank">
+            Pedir cápsulas
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- PROCESSO -->
+<section id="processo" class="process-section">
+  <div class="container">
+    <div class="section-title">
+      <span class="small">Do campo à xícara</span>
+      <h2>Um processo pensado para preservar sabor</h2>
+      <p>
+        O Café Santa Luzia passa por etapas cuidadosas para manter aroma, corpo e qualidade.
+        Da lavoura ao preparo, cada detalhe ajuda a entregar um café com identidade, tradição e presença.
+      </p>
+    </div>
+
+    <div class="process-layout">
+      <div class="process-image">
+        <img src="assets/foto-lavoura.jpg" alt="Lavoura de café Santa Luzia">
+        <div class="process-image-label">
+          <strong>Origem selecionada</strong>
+          <span>Cuidado desde a lavoura</span>
+        </div>
+      </div>
+
+      <div class="process-steps">
+
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <div>
+            <h3>Seleção dos grãos</h3>
+            <p>
+              Os grãos são escolhidos com atenção para garantir um padrão de qualidade,
+              aroma marcante e bebida equilibrada. Essa etapa é essencial para manter a
+              identidade do café em cada embalagem.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <div>
+            <h3>Torra equilibrada</h3>
+            <p>
+              A torra busca realçar as características naturais do café, preservando corpo,
+              aroma e sabor agradável. O objetivo é entregar uma bebida presente, sem perder
+              suavidade no preparo.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <div>
+            <h3>Moagem e embalagem</h3>
+            <p>
+              Cada versão é preparada pensando no uso ideal: grão para quem mói na hora,
+              pó para o preparo tradicional e cápsulas para quem busca praticidade no dia a dia.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04</div>
+          <div>
+            <h3>Entrega e experiência</h3>
+            <p>
+              O Café Santa Luzia chega ao cliente com visual rústico, embalagem marcante
+              e atendimento próximo, mantendo a sensação de café do interior, feito com cuidado.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- BANNER -->
+  <section>
+    <div class="container">
+      <div class="banner">
+        <h2>O café que combina com mesa de madeira, prosa boa e manhã tranquila.</h2>
+        <p>
+          O Café Santa Luzia foi pensado para ser mais do que uma bebida: é uma experiência visual,
+          aromática e afetiva. Um café com cara de tradição, feito para quem valoriza origem e qualidade.
+        </p>
+        <a href="#contato" class="btn btn-primary">Quero fazer meu pedido</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-title">
+        <span class="small">Galeria</span>
+        <h2>Visual rústico, produto marcante</h2>
+        <p>
+          Use esse espaço para mostrar fotos reais das embalagens, da lavoura, do café sendo preparado
+          e dos bastidores da produção.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="assets/foto-embalagem.jpg" alt="Embalagem Café Santa Luzia" />
+          <span>Embalagem premium</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/foto-graos.jpg" alt="Grãos de café" />
+          <span>Grãos selecionados</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/foto-xicara.jpg" alt="Xícara de café" />
+          <span>Café na xícara</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/foto-lavoura.jpg" alt="Lavoura de café" />
+          <span>Origem no campo</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/foto-capsulas.jpg" alt="Cápsulas de café" />
+          <span>Cápsulas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2>Faça seu pedido ou tire suas dúvidas</h2>
+
+        <p>
+          Atendimento próximo, direto e simples. Escolha o tipo de café, informe a quantidade e combine
+          a melhor forma de entrega.
+        </p>
+
+        <a href="https://wa.me/5500000000000?text=Olá! Gostaria de fazer um pedido do Café Santa Luzia."
+           class="btn btn-primary"
+           target="_blank">
+          Chamar no WhatsApp
+        </a>
+
+        <div class="contact-list">
+          <div>
+            <strong>Instagram</strong>
+            @cafe.santa.luzia
+          </div>
+
+          <div>
+            <strong>Origem</strong>
+            Região de Mococa - SP
+          </div>
+
+          <div>
+            <strong>Produtos</strong>
+            Café em grão, café em pó e café em cápsula
+          </div>
+        </div>
+      </div>
+
+      <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" />
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" placeholder="Digite seu WhatsApp" />
+
+        <label for="produto">Produto de interesse</label>
+        <select id="produto">
+          <option>Café em grão</option>
+          <option>Café em pó</option>
+          <option>Café em cápsula</option>
+          <option>Quero conhecer todos</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" placeholder="Exemplo: quero 2 pacotes de café em pó e 1 café em grão."></textarea>
+
+        <button type="button" class="btn btn-primary" onclick="enviarWhatsApp()">
+          Enviar pedido pelo WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Café Santa Luzia</strong> — Tradição e Qualidade | Produzido na região de Mococa - SP
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5500000000000?text=Olá! Gostaria de conhecer o Café Santa Luzia."
+     class="whatsapp"
+     target="_blank"
+     aria-label="WhatsApp">
+    ☎
+  </a>
+
+  <script>
+    function enviarWhatsApp() {
+      const nome = document.getElementById("nome").value;
+      const telefone = document.getElementById("telefone").value;
+      const produto = document.getElementById("produto").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const numeroWhatsApp = "5500000000000"; // Troque pelo número real com DDD
+
+      const texto = `
+Olá! Gostaria de fazer um pedido do Café Santa Luzia.
+
+Nome: ${nome}
+Telefone: ${telefone}
+Produto de interesse: ${produto}
+Mensagem: ${mensagem}
+      `;
+
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
+>>>>>>> 9b931fee255453906fde767e5eef8af0d1696ab0
