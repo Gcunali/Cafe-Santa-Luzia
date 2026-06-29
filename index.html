@@ -417,33 +417,37 @@
   border-color: rgba(214,166,79,0.75);
 }
 
-.product-img {
+..product-img {
   width: 100%;
   height: 310px;
   position: relative;
   overflow: hidden;
+  background-color: #120f0a;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 1px solid rgba(218, 166, 79, 0.25);
 }
 
+/* CAFÉ EM GRÃO */
 .product-img.grao {
   background-image:
     linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("./assets/cafe-grao.jpg");
+    url("assets/cafe-grao.jpg");
 }
 
+/* CAFÉ EM PÓ */
 .product-img.po {
   background-image:
     linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("./assets/cafe-po.jpg");
+    url("assets/cafe-po.jpg");
 }
 
+/* CAFÉ EM CÁPSULA */
 .product-img.capsula {
   background-image:
     linear-gradient(to bottom, rgba(8, 6, 4, 0.05), rgba(8, 6, 4, 0.35)),
-    url("./assets/cafe-capsula.jpg");
+    url("assets/cafe-capsula.jpg");
 }
 
 .product-badge {
@@ -915,10 +919,10 @@
       <div class="product-grid">
 
         <!-- CAFÉ EM GRÃO -->
-        <article class="product-card">
-          <div class="product-img grao">
+        <div class="product-img">
+          <img src="./assets/cafe-grao.jpg" alt="Café Santa Luzia em grão">
             <span class="product-badge">Mais aromático</span>
-          </div>
+              </div>
 
           <div class="product-content">
             <h3>Café em Grão</h3>
@@ -960,10 +964,10 @@
         </article>
 
         <!-- CAFÉ EM PÓ -->
-        <article class="product-card">
-          <div class="product-img po">
+        <div class="product-img">
+          <img src="./assets/cafe-po.jpg" alt="Café Santa Luzia em pó">
             <span class="product-badge">Tradicional</span>
-          </div>
+              </div>
 
           <div class="product-content">
             <h3>Café em Pó</h3>
@@ -1005,10 +1009,10 @@
         </article>
 
         <!-- CAFÉ EM CÁPSULA -->
-        <article class="product-card">
-          <div class="product-img capsula">
-            <span class="product-badge">Praticidade</span>
-          </div>
+        <div class="product-img">
+            <img src="./assets/cafe-capsula.jpg" alt="Cápsulas Café Santa Luzia">
+              <span class="product-badge">Praticidade</span>
+                </div>
 
           <div class="product-content">
             <h3>Café em Cápsula</h3>
