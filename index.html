@@ -1311,8 +1311,9 @@
         <span class="small">Galeria</span>
         <h2>Visual rústico, produto marcante</h2>
         <p>
-          Use esse espaço para mostrar fotos reais das embalagens, da lavoura, do café sendo preparado
-          e dos bastidores da produção.
+          Conheça de perto a essência do Café Santa Luzia: embalagens com identidade rústica,
+  lavouras cheias de tradição, grãos selecionados e momentos que mostram o cuidado
+  por trás de cada xícara.
         </p>
       </div>
 
@@ -1363,10 +1364,24 @@
         </a>
 
         <div class="contact-list">
-          <div>
-            <strong>Instagram</strong>
-            @cafe.santa.luzia
-          </div>
+          <div class="instagram-box">
+  <div>
+    <strong>Instagram</strong>
+    <span>@cafe.santa.luzia</span>
+  </div>
+
+  <a 
+  href="https://www.instagram.com/cafe.santa.luzia/" 
+  class="btn-instagram-icon" 
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Abrir Instagram do Café Santa Luzia">
+
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.1A4.9 4.9 0 1 1 7.1 12 4.9 4.9 0 0 1 12 7.1Zm0 2A2.9 2.9 0 1 0 14.9 12 2.9 2.9 0 0 0 12 9.1Zm5.15-2.45a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/>
+  </svg>
+</a>
+</div>
 
           <div>
             <strong>Origem</strong>
@@ -2230,7 +2245,53 @@ Mensagem: ${mensagem}
       color: var(--dourado);
       display: block;
     }
+ .instagram-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 110px;
+  padding: 24px 28px !important;
+}
 
+.instagram-info {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.instagram-info span {
+  display: block;
+  color: var(--branco-suave);
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-top: 4px;
+}
+
+.btn-instagram-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5);
+  box-shadow: 0 14px 34px rgba(214, 41, 118, 0.35);
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-instagram-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+.btn-instagram-icon:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 18px 42px rgba(214, 41, 118, 0.5);
+}
     form {
       padding: 34px;
       border-radius: 28px;
