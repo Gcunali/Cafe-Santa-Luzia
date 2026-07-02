@@ -731,7 +731,290 @@
       border: 1px solid rgba(214,166,79,0.35);
       font-size: 0.9rem;
     }
+/* PEDIDO */
 
+.order-box {
+  margin-top: 48px;
+  padding: 34px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(214,166,79,0.12), transparent 35%),
+    linear-gradient(180deg, rgba(255,248,234,0.07), rgba(255,248,234,0.02));
+  border: 1px solid rgba(214,166,79,0.22);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.40);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(214,166,79,0.04), transparent 38%);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.order-header-text h3 {
+  color: var(--dourado);
+  font-size: 2rem;
+  margin: 8px 0 8px;
+}
+
+.order-header-text p {
+  color: rgba(247,234,210,0.80);
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.order-badge {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(214,166,79,0.28);
+  background: rgba(0,0,0,0.28);
+  color: var(--dourado);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.order-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 220px));
+  gap: 14px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.summary-mini-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.26);
+  border: 1px solid rgba(214,166,79,0.18);
+}
+
+.summary-mini-card span {
+  display: block;
+  color: rgba(247,234,210,0.65);
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+.summary-mini-card strong {
+  color: var(--branco-suave);
+  font-size: 1.4rem;
+}
+
+.cart-items {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-cart {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.22);
+  border: 1px dashed rgba(214,166,79,0.28);
+  color: rgba(247,234,210,0.72);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1.5fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,248,234,0.05), rgba(255,248,234,0.02));
+  border: 1px solid rgba(214,166,79,0.18);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+}
+
+.cart-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--dourado), var(--caramelo));
+  color: #120b06;
+  font-weight: 900;
+  font-size: 0.92rem;
+  flex-shrink: 0;
+}
+
+.cart-info strong {
+  display: block;
+  color: var(--branco-suave);
+  font-size: 1.08rem;
+  margin-bottom: 4px;
+}
+
+.cart-info span {
+  display: block;
+  color: rgba(247,234,210,0.70);
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.cart-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cart-subtotal {
+  color: var(--dourado);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(214,166,79,0.18);
+  color: var(--dourado);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cart-actions button:hover {
+  background: var(--dourado);
+  color: #120b06;
+  transform: scale(1.05);
+}
+
+.cart-quantity {
+  min-width: 30px;
+  text-align: center;
+  color: var(--branco-suave);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.order-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 0;
+  margin-top: 2px;
+  border-top: 1px dashed rgba(214,166,79,0.28);
+  border-bottom: 1px dashed rgba(214,166,79,0.28);
+  position: relative;
+  z-index: 1;
+}
+
+.order-total span {
+  color: rgba(247,234,210,0.72);
+  font-size: 1rem;
+}
+
+.order-total strong {
+  color: var(--dourado);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  color: var(--dourado);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(214,166,79,0.22);
+  background: rgba(0,0,0,0.28);
+  color: var(--branco-suave);
+  outline: none;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(214,166,79,0.55);
+  box-shadow: 0 0 0 3px rgba(214,166,79,0.08);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(247,234,210,0.42);
+}
+
+.field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.btn-finish-order {
+  margin-top: 24px;
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  min-height: 58px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-finish-order:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
     /* CONTATO */
 
     .contact {
@@ -1011,7 +1294,34 @@
 .process-image {
   min-height: 340px;
 }
-    }
+ }
+.order-box {
+  padding: 24px;
+}
+
+.order-header {
+  flex-direction: column;
+}
+
+.order-summary-strip {
+  grid-template-columns: 1fr;
+}
+
+.cart-item {
+  grid-template-columns: 1fr;
+}
+
+.cart-main {
+  align-items: flex-start;
+}
+
+.cart-side {
+  align-items: flex-start;
+}
+
+.order-form {
+  grid-template-columns: 1fr;
+}
   </style>
 </head>
 
@@ -1173,11 +1483,13 @@
             A partir de R$ 40,00 <small>/ pacote</small>
           </div>
 
-          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em grão."
-             class="btn btn-primary"
-             target="_blank">
-            Pedir café em grão
-          </a>
+          <button 
+            class="btn btn-primary btn-add-cart"
+              data-nome="Café em Grão"
+                data-preco="40.00"
+                 type="button">
+                   Adicionar ao pedido
+                    </button>
         </div>
       </article>
 
@@ -1219,11 +1531,13 @@
             A partir de R$ 40,00 <small>/ pacote</small>
           </div>
 
-          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em pó."
-             class="btn btn-primary"
-             target="_blank">
-            Pedir café em pó
-          </a>
+            <button 
+            class="btn btn-primary btn-add-cart"
+            data-nome="Café em Pó"
+            data-preco="40.00"
+            type="button">
+            Adicionar ao pedido
+          </button>
         </div>
       </article>
 
@@ -1265,15 +1579,75 @@
             A partir de R$ 15,00 <small>/ caixa</small>
           </div>
 
-          <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Café Santa Luzia em cápsula."
-             class="btn btn-primary"
-             target="_blank">
-            Pedir cápsulas
-          </a>
+          <button 
+            class="btn btn-primary btn-add-cart"
+            data-nome="Café em Cápsula"
+            data-preco="15.00"
+            type="button">
+            Adicionar ao pedido
+          </button>
         </div>
       </article>
 
     </div>
+    <div id="pedido" class="order-box">
+  <div class="order-header">
+    <div class="order-header-text">
+      <span class="small">Seu pedido</span>
+      <h3>Confira os itens selecionados</h3>
+      <p>
+        Adicione os cafés desejados, ajuste as quantidades e finalize o pedido
+        diretamente pelo WhatsApp com tudo organizado.
+      </p>
+    </div>
+
+    <div class="order-badge">
+      <span>Pedido online</span>
+    </div>
+  </div>
+
+  <div class="order-summary-strip">
+    <div class="summary-mini-card">
+      <span>Itens no pedido</span>
+      <strong id="cart-count">0</strong>
+    </div>
+
+    <div class="summary-mini-card">
+      <span>Total atual</span>
+      <strong id="cart-total-top">R$ 0,00</strong>
+    </div>
+  </div>
+
+  <div id="cart-items" class="cart-items">
+    <p class="empty-cart">Seu pedido ainda está vazio.</p>
+  </div>
+
+  <div class="order-total">
+    <span>Total do pedido</span>
+    <strong id="cart-total">R$ 0,00</strong>
+  </div>
+
+  <div class="order-form">
+    <div class="field">
+      <label for="client-name">Nome</label>
+      <input type="text" id="client-name" placeholder="Digite seu nome">
+    </div>
+
+    <div class="field">
+      <label for="client-address">Entrega ou retirada</label>
+      <input type="text" id="client-address" placeholder="Informe endereço ou forma de retirada">
+    </div>
+
+    <div class="field field-full">
+      <label for="client-note">Observações</label>
+      <textarea id="client-note" placeholder="Ex.: sem pressa, entregar à tarde, referência do endereço, etc."></textarea>
+    </div>
+  </div>
+
+  <button id="finish-order" class="btn btn-primary btn-finish-order" type="button">
+    Finalizar pedido no WhatsApp
+  </button>
+</div>
   </div>
 </section>
 
@@ -1418,7 +1792,7 @@
           a melhor forma de entrega.
         </p>
 
-        <a href="https://wa.me/5500000000000?text=Olá! Gostaria de fazer um pedido do Café Santa Luzia."
+        <a href="https://wa.me/5519971243601?text=Olá! Gostaria de fazer um pedido do Café Santa Luzia."
            class="btn btn-primary"
            target="_blank">
           Chamar no WhatsApp
@@ -1490,7 +1864,7 @@
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5500000000000?text=Olá! Gostaria de conhecer o Café Santa Luzia."
+  <a href="https://wa.me/5519971243601?text=Olá! Gostaria de conhecer o Café Santa Luzia."
      class="whatsapp"
      target="_blank"
      aria-label="WhatsApp">
@@ -1504,7 +1878,7 @@
       const produto = document.getElementById("produto").value;
       const mensagem = document.getElementById("mensagem").value;
 
-      const numeroWhatsApp = "5500000000000"; // Troque pelo número real com DDD
+      const numeroWhatsApp = "5519971243601"; // Troque pelo número real com DDD
 
       const texto = `
 Olá! Gostaria de fazer um pedido do Café Santa Luzia.
@@ -1519,6 +1893,161 @@ Mensagem: ${mensagem}
       window.open(url, "_blank");
     }
   </script>
+  <script>
+  const WHATSAPP_NUMBER = "5519971243601"; 
+  const cart = [];
+
+  const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const cartTotalTop = document.getElementById("cart-total-top");
+const cartCount = document.getElementById("cart-count");
+const finishOrderButton = document.getElementById("finish-order");
+  function formatCurrency(value) {
+    return value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    });
+  }
+
+  function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        name: name,
+        price: price,
+        quantity: 1
+      });
+    }
+
+    renderCart();
+
+    const orderBox = document.getElementById("pedido");
+    if (orderBox) {
+      orderBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  function changeQuantity(index, amount) {
+    cart[index].quantity += amount;
+
+    if (cart[index].quantity <= 0) {
+      cart.splice(index, 1);
+    }
+
+    renderCart();
+  }
+
+  function getTotal() {
+    return cart.reduce((total, item) => {
+      return total + item.price * item.quantity;
+    }, 0);
+  }
+
+  function renderCart() {
+    cartItems.innerHTML = "";
+
+   if (cart.length === 0) {
+  cartItems.innerHTML = `<p class="empty-cart">Seu pedido ainda está vazio.</p>`;
+  cartTotal.textContent = formatCurrency(0);
+  cartTotalTop.textContent = formatCurrency(0);
+  cartCount.textContent = "0";
+  finishOrderButton.disabled = true;
+  return;
+}
+
+    cart.forEach((item, index) => {
+      const subtotal = item.price * item.quantity;
+
+      const itemElement = document.createElement("div");
+      itemElement.classList.add("cart-item");
+
+      itemElement.innerHTML = `
+  <div class="cart-main">
+    <div class="cart-badge">${index + 1}</div>
+
+    <div class="cart-info">
+      <strong>${item.name}</strong>
+      <span>Preço unitário: ${formatCurrency(item.price)}</span>
+    </div>
+  </div>
+
+  <div class="cart-side">
+    <div class="cart-subtotal">Subtotal: ${formatCurrency(subtotal)}</div>
+
+    <div class="cart-actions">
+      <button type="button" onclick="changeQuantity(${index}, -1)">−</button>
+      <span class="cart-quantity">${item.quantity}</span>
+      <button type="button" onclick="changeQuantity(${index}, 1)">+</button>
+    </div>
+  </div>
+`;
+
+      cartItems.appendChild(itemElement);
+    });
+
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+const totalValue = getTotal();
+
+cartTotal.textContent = formatCurrency(totalValue);
+cartTotalTop.textContent = formatCurrency(totalValue);
+cartCount.textContent = totalItems;
+finishOrderButton.disabled = false;
+  }
+
+  function finishOrder() {
+    if (cart.length === 0) {
+      alert("Adicione pelo menos um produto ao pedido.");
+      return;
+    }
+
+    const name = document.getElementById("client-name").value.trim();
+    const address = document.getElementById("client-address").value.trim();
+    const note = document.getElementById("client-note").value.trim();
+
+    const productList = cart.map(item => {
+      const subtotal = item.price * item.quantity;
+      return `• ${item.quantity}x ${item.name} - ${formatCurrency(item.price)} cada | Subtotal: ${formatCurrency(subtotal)}`;
+    }).join("\n");
+
+    const total = formatCurrency(getTotal());
+
+    const message = `
+Olá! Gostaria de fazer um pedido do Café Santa Luzia.
+
+${name ? `Nome: ${name}` : ""}
+${address ? `Entrega/Retirada: ${address}` : ""}
+
+Pedido:
+${productList}
+
+Valor total: ${total}
+
+${note ? `Observação: ${note}` : ""}
+
+Aguardo confirmação. Obrigado!
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank");
+  }
+
+  document.querySelectorAll(".btn-add-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.getAttribute("data-nome");
+      const price = Number(button.getAttribute("data-preco"));
+
+      addToCart(name, price);
+    });
+  });
+
+  finishOrderButton.addEventListener("click", finishOrder);
+
+  renderCart();
+</script>
 
 </body>
 </html>
